@@ -1,0 +1,134 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: #222;
+      color: #eee;
+    }
+    .container {
+      width: 95%;
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode .container {
+      background: #000000;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .logo h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .toggle-dark {
+      padding: 6px 10px;
+      background: #000000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .input-area {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .input-area input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    .input-area button {
+      padding: 10px 15px;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .input-area button:hover {
+      background: #55e550;
+    }
+    .search-bar {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .search-bar input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    ul li {
+      background: #f8f9fa;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dark-mode ul li {
+      background: #444;
+      border-color: #555;
+    }
+    .note-text {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .btns button {
+      background: #be0000;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-left: 5px;
+      font-size: 14px;
+    }
+    .btns button.edit {
+      background: #ff5e00;
+    }
+    .btns button.pin {
+      background: #ffc107;
+      color: #000;
+    }
+    .btns button:hover {
+      opacity: 0.85;
+    }
+    .pinned {
+      border-left: 5px solid #ffc107;
+    }
