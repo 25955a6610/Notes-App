@@ -47,8 +47,8 @@ const noteInput = document.getElementById('noteInput');
           editNote(index, filter);
         });
 
-        const delBtSn = document.createElement('button');
-        delBtn.textContent = 'Wipe OUT';
+        const delBtn = document.createElement('button');
+        delBtn.textContent = 'Delete';
         delBtn.addEventListener('click', () => {
           deleteNote(index, filter);
         });
@@ -76,6 +76,7 @@ const noteInput = document.getElementById('noteInput');
 
     function deleteNote(index, filter) {
       let notes = loadNotes();
+      // find correct note index in actual array when filter active
       const actualIndex = getActualIndex(index, filter);
       notes.splice(actualIndex, 1);
       saveNotes(notes);
@@ -85,7 +86,7 @@ const noteInput = document.getElementById('noteInput');
     function editNote(index, filter) {
       let notes = loadNotes();
       const actualIndex = getActualIndex(index, filter);
-      const newText = prompt('Modify Your Freed', notes[actualIndex].text);
+      const newText = prompt('Modify Your Freed :', notes[actualIndex].text);
       if (newText !== null && newText.trim() !== '') {
         notes[actualIndex].text = newText.trim();
         saveNotes(notes);
